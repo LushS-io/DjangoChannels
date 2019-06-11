@@ -1,3 +1,4 @@
+from django.conf.urls import include, url
 """mysite URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
@@ -16,6 +17,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+# mysite/urls.py
+
 urlpatterns = [
+    url(r'^chat/', include('chat.urls')),
     url(r'^admin/', admin.site.urls),
 ]
